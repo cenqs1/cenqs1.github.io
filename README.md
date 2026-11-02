@@ -72,9 +72,7 @@ An emergency assistance application concept focused on disaster-related communic
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=cenqs1&show_icons=true&theme=transparent&hide_border=true&title_color=8B0000&icon_color=B22222&text_color=BBBBBB)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=cenqs1&layout=compact&theme=transparent&hide_border=true&title_color=8B0000&text_color=BBBBBB)
 
 </div>
 
