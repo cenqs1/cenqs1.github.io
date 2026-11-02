@@ -66,23 +66,6 @@ An emergency assistance application concept focused on disaster-related communic
 - Artificial Intelligence and Machine Learning
 - Software Architecture and Design
 
----
-
-## GitHub Activity
-
-<div align="center">
-
-### Contribution Overview
-
-![Contribution Graph](https://ghchart.rshah.org/8B0000/cenqs1)
-
-### Explore My Work
-
-[![GitHub](https://img.shields.io/badge/VIEW_MY_REPOSITORIES-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/cenqs1?tab=repositories)
-
-[![Profile](https://img.shields.io/badge/VISIT_MY_PROFILE-8B0000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/cenqs1)
-
-</div>
 
 ---
 
