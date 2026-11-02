@@ -1,153 +1,110 @@
-
 const translations = {
-  en: {
-    navAbout: "About",
-    navSkills: "Skills",
-    navProjects: "Projects",
-    navTraining: "Training",
-    navContact: "Contact",
-
-    heroEyebrow: "SOFTWARE DEVELOPMENT · RESEARCH",
-    heroRole: "Computer Programmer & Aspiring Researcher",
-    heroDescription: "Building practical software solutions, exploring artificial intelligence and pursuing knowledge through technology.",
-    heroButton1: "Explore Projects",
-    heroButton2: "Get in Touch",
-
-    aboutLabel: "01 / ABOUT",
-    aboutTitle: "A little about me.",
-    aboutText: "I am a Computer Programming graduate interested in software development, backend technologies and artificial intelligence. I enjoy learning by building projects and exploring how technology can solve real-world problems. My long-term goal is to combine software development with academic research.",
-
-    detail1Title: "Software Development",
-    detail1Text: "Building practical digital solutions.",
-    detail2Title: "Artificial Intelligence",
-    detail2Text: "Exploring intelligent technologies.",
-    detail3Title: "Academic Research",
-    detail3Text: "Learning, investigating and improving.",
-
-    skillsLabel: "02 / TECHNOLOGIES",
-    skillsTitle: "Technical interests.",
-    skill1Title: "Programming",
-    skill1Text: "Programming languages and fundamentals.",
-    skill2Title: "Web Development",
-    skill2Text: "Web interfaces and application development.",
-    skill3Title: "Databases & Tools",
-    skill3Text: "Database concepts and development tools.",
-
-    projectsLabel: "03 / SELECTED WORK",
-    projectsTitle: "Projects & experiments.",
-    project1Text: "A service-oriented platform concept connecting customers and service providers.",
-    project2Text: "A personal software initiative focused on practical digital solutions.",
-    project3Text: "An emergency assistance application concept for disaster-related support.",
-    viewProject: "VIEW PROJECT ↗",
-    viewGithub: "VIEW GITHUB ↗",
-
-    trainingLabel: "04 / KNOWLEDGE SHARING",
-    trainingTitle: "Online Learning & Training.",
-    trainingText: "Beginner-friendly online coding lessons focused on clear explanations, practical examples and learning by doing.",
-    training1: "Introduction to web development, page structure and styling.",
-    training2: "Variables, conditions, switch-case and object-oriented concepts.",
-    training3Title: "Programming Basics",
-    training3: "Algorithms and problem-solving step by step.",
-    beginner: "BEGINNER",
-    priceLabel: "LESSON RATE",
-    perHour: "/ hour",
-    priceDescription: "Online individual lessons · By appointment",
-    lessonButton: "Lesson Information",
-
-    contactLabel: "05 / CONTACT",
-    contactTitle: "Let's connect.",
-    contactText: "For projects, collaboration, online lessons or professional opportunities, feel free to contact me.",
-    linkedinButton: "LINKEDIN ↗",
-    footerText: "Built with curiosity and code."
-  },
-
   tr: {
-    navAbout: "Hakkımda",
-    navSkills: "Yetenekler",
-    navProjects: "Projeler",
-    navTraining: "Eğitim",
-    navContact: "İletişim",
-
-    heroEyebrow: "YAZILIM GELİŞTİRME · ARAŞTIRMA",
-    heroRole: "Bilgisayar Programcısı ve Araştırmacı Adayı",
-    heroDescription: "Pratik yazılım çözümleri geliştiriyor, yapay zekâyı keşfediyor ve teknoloji aracılığıyla kendimi geliştiriyorum.",
-    heroButton1: "Projeleri İncele",
-    heroButton2: "İletişime Geç",
-
-    aboutLabel: "01 / HAKKIMDA",
-    aboutTitle: "Kısaca ben.",
-    aboutText: "Bilgisayar Programcılığı mezunuyum. Yazılım geliştirme, backend teknolojileri ve yapay zekâ ile ilgileniyorum. Projeler geliştirerek öğrenmeyi ve teknolojinin gerçek problemlere nasıl çözüm üretebileceğini keşfetmeyi seviyorum. Uzun vadeli hedefim yazılım geliştirmeyi akademik araştırmalarla birleştirmek.",
-
-    detail1Title: "Yazılım Geliştirme",
-    detail1Text: "Pratik dijital çözümler geliştirmek.",
-    detail2Title: "Yapay Zekâ",
-    detail2Text: "Akıllı teknolojileri keşfetmek.",
-    detail3Title: "Akademik Araştırma",
-    detail3Text: "Öğrenmek, araştırmak ve gelişmek.",
-
-    skillsLabel: "02 / TEKNOLOJİLER",
-    skillsTitle: "Teknik ilgi alanlarım.",
-    skill1Title: "Programlama",
-    skill1Text: "Programlama dilleri ve temel kavramlar.",
-    skill2Title: "Web Geliştirme",
-    skill2Text: "Web arayüzleri ve uygulama geliştirme.",
-    skill3Title: "Veritabanı ve Araçlar",
-    skill3Text: "Veritabanı kavramları ve geliştirme araçları.",
-
-    projectsLabel: "03 / SEÇİLMİŞ ÇALIŞMALAR",
-    projectsTitle: "Projeler ve denemeler.",
-    project1Text: "Müşterilerle hizmet verenleri buluşturmayı amaçlayan platform fikri.",
-    project2Text: "Pratik dijital çözümlere odaklanan kişisel yazılım girişimi.",
-    project3Text: "Afet durumlarında destek sağlamayı amaçlayan acil yardım uygulaması fikri.",
-    viewProject: "PROJEYİ İNCELE ↗",
-    viewGithub: "GITHUB PROFİLİ ↗",
-
-    trainingLabel: "04 / BİLGİ PAYLAŞIMI",
-    trainingTitle: "Online Eğitim ve Öğrenme.",
-    trainingText: "Açık anlatım, pratik örnekler ve uygulayarak öğrenme üzerine odaklanan başlangıç seviyesi çevrim içi kodlama dersleri.",
-    training1: "Web geliştirmeye giriş, sayfa yapısı ve biçimlendirme.",
-    training2: "Değişkenler, koşullar, switch-case ve nesne yönelimli programlama kavramları.",
-    training3Title: "Programlamaya Giriş",
-    training3: "Algoritmaları ve problem çözmeyi adım adım öğrenme.",
-    beginner: "BAŞLANGIÇ",
-    priceLabel: "DERS ÜCRETİ",
-    perHour: "/ saat",
-    priceDescription: "Birebir çevrim içi ders · Randevu ile",
-    lessonButton: "Ders Bilgisi Al",
-
-    contactLabel: "05 / İLETİŞİM",
-    contactTitle: "İletişime geçelim.",
-    contactText: "Projeler, iş birlikleri, online dersler veya profesyonel fırsatlar için benimle iletişime geçebilirsiniz.",
-    linkedinButton: "LINKEDIN ↗",
-    footerText: "Merak ve kod ile geliştirildi."
+    navAbout:"Hakkımda",navSkills:"Yetkinlikler",navProjects:"Projeler",navJourney:"Yolculuk",navEducation:"Eğitim",navContact:"İletişim",navCta:"Birlikte çalışalım",
+    heroEyebrow:"YAZILIM GELİŞTİRME · ÖĞRENME · ARAŞTIRMA",heroLine1:"Fikirleri",heroLine2:"işe yarayan",heroLine3:"dijital deneyimlere",heroLine4:"dönüştürüyorum.",
+    heroCopy:"Bilgisayar Programcılığı mezunuyum. Yazılım geliştirme, web teknolojileri ve yapay zekâ alanlarında öğrenmeye, üretmeye ve gerçek problemlere çözüm geliştirmeye odaklanıyorum.",
+    heroProjects:"Projelerimi keşfet",heroAbout:"Beni tanı",heroMeta1:"Geliştirme odaklı",heroMeta2:"Sürekli öğrenme",heroMeta3:"Araştırma merakı",scroll:"AŞAĞI KAYDIR",
+    aboutEyebrow:"KISA BİR TANITIM",aboutTitle:"Kodun arkasındaki <em>merak.</em>",aboutLead:"Ben Cennet Uçak. Bilgisayar Programcılığı mezunu bir yazılım geliştirici adayıyım.",
+    aboutText:"Yazılımı yalnızca kod yazmak olarak değil; bir problemi anlamak, doğru araçları seçmek ve sürdürülebilir bir çözüm üretmek olarak görüyorum. Backend geliştirme, web uygulamaları ve yapay zekâ başta olmak üzere farklı alanlarda sağlam bir temel oluşturmayı hedefliyorum.",
+    aboutText2:"Uzun vadeli hedefim, teknik üretimimi araştırma kültürüyle birleştirerek akademik alanda da katkı sağlayabilmek. Bu portfolyo, öğrendiklerimi ve geliştirdiğim işleri şeffaf biçimde paylaşmak için hazırlandı.",
+    profileRole:"Bilgisayar Programcısı",profileFocus:"ODAK",profileFocusValue:"Yazılım · AI · Araştırma",profileMindset:"YAKLAŞIM",profileMindsetValue:"Üret · Öğren · Geliştir",profileBase:"DİL",quote:"Her proje, daha iyi sorular sormak için yeni bir fırsattır.",
+    skillsEyebrow:"ARAÇLARIM",skillsTitle:"Teknoloji <em>yığınım.</em>",skillsDesc:"Aktif olarak kullandığım veya üzerinde çalıştığım teknolojiler. Yetkinlik seviyeleri yerine öğrenme ve üretim alanlarımı öne çıkarıyorum.",
+    skillProgramming:"Programlama temelleri, nesne yönelimli yaklaşım",skillWeb:"Arayüz geliştirme ve sunucu tarafı mantığı",skillDatabase:"Veri modelleme ve ilişkisel veritabanları",skillTools:"Versiyon kontrolü ve geliştirme süreçleri",skillExploring:"Derinleştirmeyi hedeflediğim alanlar",
+    projectsEyebrow:"SEÇİLMİŞ ÇALIŞMALAR",projectsTitle:"Fikirden <em>uygulamaya.</em>",projectsDesc:"Projelerimin amacı yalnızca çalışan bir ürün ortaya koymak değil; analiz, tasarım, geliştirme ve iyileştirme süreçlerini deneyimlemek.",
+    projectTypeWeb:"WEB UYGULAMASI",projectTypeMobile:"MOBİL UYGULAMA / DEMO",hallederizDesc:"Hizmet verenlerle hizmet arayanları bir araya getirmeyi hedefleyen PHP ve MySQL tabanlı platform projesi. Rol bazlı kullanıcı yapısı ve temel yönetim süreçleri üzerine geliştirilmiştir.",
+    ucakDesc:"Yazılım alanındaki çalışmalarımı ve dijital üretimlerimi bir çatı altında sunmak için oluşturduğum marka ve proje alanı.",depremDesc:"Acil durum iletişimi ve destek süreçlerine odaklanan Android demo çalışması. Projenin kapsamı ve teknik ayrıntıları geliştirme sürecinde belgelenmektedir.",
+    projectNote:"Not: Proje bağlantılarını ve açıklamalarını yayına almadan önce son sürümlerine göre kontrol et.",
+    journeyEyebrow:"GELİŞİM SÜRECİ",journeyTitle:"Bir sonraki <em>seviyeye.</em>",journeyDesc:"Bu zaman çizelgesi tamamlanmış başarı iddiası değil; eğitimimi, üretimimi ve hedeflerimi takip ettiğim yaşayan bir yol haritası.",
+    timeline1Title:"Bilgisayar Programcılığı",timeline1Text:"Programlama, web geliştirme, veritabanı ve yazılım mantığı üzerine ön lisans eğitimi.",timelineDone:"TAMAMLANDI",
+    timeline2Title:"Yazılım temellerini derinleştirme",timeline2Text:"C# ve nesne yönelimli programlama, algoritmalar, veri yapıları ve Git tabanlı proje pratiği.",timelineCurrent:"DEVAM EDİYOR",
+    timeline3Title:"Yapay zekâ ve veri bilimi",timeline3Text:"Python, makine öğrenmesi ve veri odaklı uygulamalar konusunda sistematik uzmanlaşma.",timelinePlanned:"HEDEF",
+    timeline4Title:"Akademik gelişim",timeline4Text:"Lisans eğitimini sürdürmek, araştırma yöntemlerini öğrenmek ve akademik çalışmalara katkı sunmak.",
+    educationEyebrow:"ÖĞRENME VE PAYLAŞMA",educationTitle:"Bilgiyi <em>paylaşarak.</em>",teachingLabel:"ONLINE EĞİTİM",teachingTitle:"Başlangıç seviyesinde kodlama dersleri",
+    teachingText:"HTML, CSS ve temel programlama konularında öğrenme sürecini destekleyen çevrim içi bireysel dersler.",perHour:"/ saat",teachingCta:"Ders hakkında iletişime geç",
+    certLabel:"SERTİFİKALAR & EĞİTİMLER",certTitle:"Sürekli öğrenme",certText:"Tamamladığım eğitimleri ve doğrulanabilir sertifikaları burada paylaşacağım. Henüz eklenmemiş sertifikalar için yer tutucu kayıt kullanılmamıştır.",
+    certPlaceholderTitle:"Yeni sertifika alanı",certPlaceholderText:"Sertifika bağlantısı eklendiğinde burada görüntülenecek.",
+    cvTitle:"Deneyimimi daha yakından <em>inceleyin.</em>",cvText:"Eğitim, teknik yetkinlikler ve projelerimin özeti için CV dosyamı inceleyebilirsiniz.",cvButton:"CV'yi görüntüle",cvNote:"CV dosyanı assets klasörüne cennet-ucak-cv.pdf adıyla eklediğinde bu bağlantı çalışacaktır.",
+    contactEyebrow:"İLETİŞİM",contactTitle:"Bir fikrin mi var?<br><em>Konuşalım.</em>",contactText:"Proje, eğitim veya iş birliği fikirleri için benimle iletişime geçebilirsin.",
+    availability:"Yeni bağlantılara açık",footer:"Tüm hakları saklıdır.",backTop:"BAŞA DÖN ↑"
+  },
+  en: {
+    navAbout:"About",navSkills:"Skills",navProjects:"Projects",navJourney:"Journey",navEducation:"Learning",navContact:"Contact",navCta:"Let's connect",
+    heroEyebrow:"SOFTWARE DEVELOPMENT · LEARNING · RESEARCH",heroLine1:"Turning",heroLine2:"curiosity into",heroLine3:"useful digital",heroLine4:"experiences.",
+    heroCopy:"I am a Computer Programming graduate focused on learning, building and solving real problems through software development, web technologies and artificial intelligence.",
+    heroProjects:"Explore projects",heroAbout:"Get to know me",heroMeta1:"Building with purpose",heroMeta2:"Continuous learning",heroMeta3:"Research mindset",scroll:"SCROLL TO EXPLORE",
+    aboutEyebrow:"A BRIEF INTRODUCTION",aboutTitle:"Curiosity behind <em>the code.</em>",aboutLead:"I'm Cennet Uçak, a Computer Programming graduate building my path in software development.",
+    aboutText:"I see software as more than writing code: it is about understanding a problem, choosing the right tools and creating a maintainable solution. I am building a strong foundation across backend development, web applications and artificial intelligence.",
+    aboutText2:"My long-term goal is to combine hands-on engineering with a research mindset and contribute to academia. This portfolio is a place to share what I learn and build with clarity.",
+    profileRole:"Computer Programmer",profileFocus:"FOCUS",profileFocusValue:"Software · AI · Research",profileMindset:"MINDSET",profileMindsetValue:"Build · Learn · Improve",profileBase:"LANGUAGE",quote:"Every project is another opportunity to ask better questions.",
+    skillsEyebrow:"MY TOOLKIT",skillsTitle:"Technology <em>stack.</em>",skillsDesc:"Technologies I use or explore. I prefer to show my learning and building areas rather than claim unverified proficiency levels.",
+    skillProgramming:"Programming fundamentals and object-oriented concepts",skillWeb:"Interface development and server-side logic",skillDatabase:"Data modelling and relational databases",skillTools:"Version control and development workflow",skillExploring:"Areas I am actively exploring",
+    projectsEyebrow:"SELECTED WORK",projectsTitle:"From idea to <em>implementation.</em>",projectsDesc:"My projects are about more than delivering a working product: they help me practise analysis, design, development and iteration.",
+    projectTypeWeb:"WEB APPLICATION",projectTypeMobile:"MOBILE APPLICATION / DEMO",hallederizDesc:"A PHP and MySQL platform concept designed to connect service providers with people looking for services. It explores role-based users and core management workflows.",
+    ucakDesc:"A brand and project space created to bring my software work and digital experiments together.",depremDesc:"An Android demo concept focused on emergency communication and support workflows. Scope and technical details are being documented as the project evolves.",
+    projectNote:"Note: Review project links and descriptions against the latest versions before publishing.",
+    journeyEyebrow:"GROWTH IN PROGRESS",journeyTitle:"Moving to the <em>next level.</em>",journeyDesc:"This timeline is a living roadmap of my education, work and goals—not a claim that every milestone is already complete.",
+    timeline1Title:"Computer Programming",timeline1Text:"Associate-degree studies covering programming, web development, databases and software fundamentals.",timelineDone:"COMPLETED",
+    timeline2Title:"Strengthening software foundations",timeline2Text:"C#, object-oriented programming, algorithms, data structures and Git-based project practice.",timelineCurrent:"IN PROGRESS",
+    timeline3Title:"Artificial intelligence & data science",timeline3Text:"Building structured knowledge in Python, machine learning and data-driven applications.",timelinePlanned:"PLANNED",
+    timeline4Title:"Academic development",timeline4Text:"Continuing undergraduate studies, learning research methods and contributing to academic work.",
+    educationEyebrow:"LEARNING & SHARING",educationTitle:"Knowledge through <em>sharing.</em>",teachingLabel:"ONLINE TEACHING",teachingTitle:"Coding lessons for beginners",
+    teachingText:"Online one-to-one lessons supporting learners with HTML, CSS and programming fundamentals.",perHour:"/ hour",teachingCta:"Ask about lessons",
+    certLabel:"CERTIFICATES & LEARNING",certTitle:"Always learning",certText:"I will share completed courses and verifiable certificates here. No placeholder credentials are presented as completed achievements.",
+    certPlaceholderTitle:"Certificate space",certPlaceholderText:"A certificate will appear here when its verified link is added.",
+    cvTitle:"Take a closer <em>look at my work.</em>",cvText:"View my CV for an overview of my education, technical skills and projects.",cvButton:"View CV",cvNote:"Add your CV to the assets folder as cennet-ucak-cv.pdf to activate this link.",
+    contactEyebrow:"CONTACT",contactTitle:"Have an idea?<br><em>Let's talk.</em>",contactText:"Feel free to reach out about projects, lessons or collaboration opportunities.",
+    availability:"Open to new connections",footer:"All rights reserved.",backTop:"BACK TO TOP ↑"
   }
 };
 
-const languageBtn = document.getElementById("languageBtn");
+let currentLanguage = "tr";
+const languageButton = document.getElementById("languageSwitch");
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
 
-let currentLanguage = "en";
-
-function changeLanguage(language) {
+function setLanguage(language) {
   currentLanguage = language;
-
   document.documentElement.lang = language;
-  languageBtn.textContent = language === "en" ? "TR" : "EN";
-
-  document.querySelectorAll("[data-i18n]").forEach(element => {
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
-    const translatedText = translations[language][key];
-
-    if (translatedText) {
-      element.textContent = translatedText;
-    }
+    const value = translations[language][key];
+    if (value) element.innerHTML = value;
   });
+  languageButton.textContent = language === "tr" ? "EN" : "TR";
+  languageButton.setAttribute("aria-label", language === "tr" ? "Switch to English" : "Türkçe'ye geç");
+  localStorage.setItem("portfolio-language", language);
 }
 
-languageBtn.addEventListener("click", () => {
-  const nextLanguage = currentLanguage === "en" ? "tr" : "en";
-  changeLanguage(nextLanguage);
+languageButton.addEventListener("click", () => setLanguage(currentLanguage === "tr" ? "en" : "tr"));
+const savedLanguage = localStorage.getItem("portfolio-language");
+if (savedLanguage === "en") setLanguage("en");
+
+menuToggle.addEventListener("click", () => {
+  const isOpen = mainNav.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Menüyü kapat" : "Menüyü aç");
 });
+mainNav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+  mainNav.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded", "false");
+}));
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-changeLanguage("en");
+const progress = document.getElementById("scrollProgress");
+function updateProgress() {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = `${scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0}%`;
+}
+window.addEventListener("scroll", updateProgress, { passive: true });
+updateProgress();
+
+const revealObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll(".reveal").forEach(element => revealObserver.observe(element));

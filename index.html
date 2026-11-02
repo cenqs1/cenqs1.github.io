@@ -1,287 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b090b">
-  <meta name="description" content="Cennet Uçak - Computer Programmer, Software Developer and Aspiring Researcher.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090c">
+  <meta name="description" content="Cennet Uçak — yazılım geliştirme, web teknolojileri ve yapay zekâ odağında kişisel portfolyo.">
   <meta property="og:title" content="Cennet Uçak | Software Developer">
-  <meta property="og:description" content="Software development, technology and academic research.">
-  <title>Cennet Uçak | Software Developer</title>
+  <meta property="og:description" content="Yazılım, projeler, eğitim ve akademik hedefler.">
+  <meta property="og:type" content="website">
+  <title>Cennet Uçak — Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-<header class="header">
-  <div class="container nav">
-    <a href="#" class="logo">C<span>.</span> UÇAK</a>
-
-    <nav class="nav-links">
-      <a href="#about" data-i18n="navAbout">About</a>
-      <a href="#skills" data-i18n="navSkills">Skills</a>
-      <a href="#projects" data-i18n="navProjects">Projects</a>
-      <a href="#training" data-i18n="navTraining">Training</a>
-      <a href="#contact" data-i18n="navContact">Contact</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Cennet Uçak ana sayfa">
+      <span class="brand-mark">CU<span>.</span></span>
+      <span class="brand-name">CENNET UÇAK<small>SOFTWARE &amp; RESEARCH</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="Ana menü">
+      <a href="#about" data-i18n="navAbout">Hakkımda</a>
+      <a href="#skills" data-i18n="navSkills">Yetkinlikler</a>
+      <a href="#projects" data-i18n="navProjects">Projeler</a>
+      <a href="#journey" data-i18n="navJourney">Yolculuk</a>
+      <a href="#education" data-i18n="navEducation">Eğitim</a>
+      <a href="#contact" data-i18n="navContact">İletişim</a>
     </nav>
-
-    <button class="language-btn" id="languageBtn">TR</button>
-  </div>
-</header>
-
-<main>
-
-  <section class="hero">
-    <div class="hero-glow"></div>
-    <div class="container hero-content">
-      <p class="eyebrow" data-i18n="heroEyebrow">
-        SOFTWARE DEVELOPMENT · RESEARCH
-      </p>
-
-      <h1>CENNET<br><span>UÇAK.</span></h1>
-
-      <h2 class="hero-role" data-i18n="heroRole">
-        Computer Programmer & Aspiring Researcher
-      </h2>
-
-      <p class="hero-description" data-i18n="heroDescription">
-        Building practical software solutions, exploring artificial
-        intelligence and pursuing knowledge through technology.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#projects" class="button primary" data-i18n="heroButton1">
-          Explore Projects
-        </a>
-        <a href="#contact" class="button" data-i18n="heroButton2">
-          Get in Touch
-        </a>
-      </div>
-
-      <div class="hero-socials">
-        <a href="https://github.com/cenqs1" target="_blank"
-           rel="noopener noreferrer">GITHUB ↗</a>
-        <a href="mailto:ucakcennet83@gmail.com">EMAIL ↗</a>
-      </div>
+    <div class="header-actions">
+      <button class="language-switch" id="languageSwitch" type="button" aria-label="Switch language">EN</button>
+      <a class="header-cta" href="#contact" data-i18n="navCta">Birlikte çalışalım <span>↗</span></a>
     </div>
-  </section>
+  </header>
 
-  <section id="about">
-    <div class="container">
-      <p class="section-label" data-i18n="aboutLabel">01 / ABOUT</p>
-      <h2 data-i18n="aboutTitle">A little about me.</h2>
-
-      <p class="about-text" data-i18n="aboutText">
-        I am a Computer Programming graduate interested in software
-        development, backend technologies and artificial intelligence.
-        I enjoy learning by building projects and exploring how technology
-        can solve real-world problems. My long-term goal is to combine
-        software development with academic research.
-      </p>
-
-      <div class="about-details">
-        <div>
-          <span class="detail-number">01</span>
-          <h3 data-i18n="detail1Title">Software Development</h3>
-          <p data-i18n="detail1Text">Building practical digital solutions.</p>
+  <main>
+    <section class="hero section-shell" id="home">
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="status-dot"></span><span data-i18n="heroEyebrow">YAZILIM GELİŞTİRME · ÖĞRENME · ARAŞTIRMA</span></p>
+        <h1><span data-i18n="heroLine1">Fikirleri</span><br><em data-i18n="heroLine2">işe yarayan</em><br><span data-i18n="heroLine3">dijital deneyimlere</span><br><em data-i18n="heroLine4">dönüştürüyorum.</em></h1>
+        <p class="hero-copy" data-i18n="heroCopy">Bilgisayar Programcılığı mezunuyum. Yazılım geliştirme, web teknolojileri ve yapay zekâ alanlarında öğrenmeye, üretmeye ve gerçek problemlere çözüm geliştirmeye odaklanıyorum.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects" data-i18n="heroProjects">Projelerimi keşfet <span>↗</span></a>
+          <a class="button button-quiet" href="#about" data-i18n="heroAbout">Beni tanı <span>↓</span></a>
         </div>
-        <div>
-          <span class="detail-number">02</span>
-          <h3 data-i18n="detail2Title">Artificial Intelligence</h3>
-          <p data-i18n="detail2Text">Exploring intelligent technologies.</p>
-        </div>
-        <div>
-          <span class="detail-number">03</span>
-          <h3 data-i18n="detail3Title">Academic Research</h3>
-          <p data-i18n="detail3Text">Learning, investigating and improving.</p>
+        <div class="hero-meta">
+          <span><b>01</b> <span data-i18n="heroMeta1">Geliştirme odaklı</span></span>
+          <span><b>02</b> <span data-i18n="heroMeta2">Sürekli öğrenme</span></span>
+          <span><b>03</b> <span data-i18n="heroMeta3">Araştırma merakı</span></span>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="hero-visual" aria-label="Soyut kırmızı geometrik tasarım">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="core-glow"></div>
+        <div class="hero-monogram">C<span>U</span></div>
+        <div class="visual-label visual-label-top">BUILD / LEARN / REPEAT</div>
+        <div class="visual-label visual-label-bottom">EST. 2026 — IN PROGRESS</div>
+        <div class="visual-cross cross-a">+</div><div class="visual-cross cross-b">+</div>
+      </div>
+      <a class="scroll-cue" href="#about"><span></span><small data-i18n="scroll">AŞAĞI KAYDIR</small></a>
+    </section>
 
-  <section id="skills">
-    <div class="container">
-      <p class="section-label" data-i18n="skillsLabel">02 / TECHNOLOGIES</p>
-      <h2 data-i18n="skillsTitle">Technical interests.</h2>
+    <section class="intro-strip">
+      <div class="strip-inner"><span>SOFTWARE DEVELOPMENT</span><i>✳</i><span>WEB TECHNOLOGIES</span><i>✳</i><span>ARTIFICIAL INTELLIGENCE</span><i>✳</i><span>ACADEMIC INTEREST</span></div>
+    </section>
 
-      <div class="grid">
-        <article class="card">
-          <h3 data-i18n="skill1Title">Programming</h3>
-          <p data-i18n="skill1Text">Programming languages and fundamentals.</p>
-          <div class="tag-list">
-            <span class="tag">C#</span>
-            <span class="tag">PHP</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Python</span>
+    <section class="section section-shell" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span>01 /</span> <span data-i18n="aboutEyebrow">KISA BİR TANITIM</span></p>
+        <h2 data-i18n="aboutTitle">Kodun arkasındaki <em>merak.</em></h2>
+      </div>
+      <div class="about-layout">
+        <div class="about-main reveal">
+          <p class="lead" data-i18n="aboutLead">Ben Cennet Uçak. Bilgisayar Programcılığı mezunu bir yazılım geliştirici adayıyım.</p>
+          <p data-i18n="aboutText">Yazılımı yalnızca kod yazmak olarak değil; bir problemi anlamak, doğru araçları seçmek ve sürdürülebilir bir çözüm üretmek olarak görüyorum. Backend geliştirme, web uygulamaları ve yapay zekâ başta olmak üzere farklı alanlarda sağlam bir temel oluşturmayı hedefliyorum.</p>
+          <p data-i18n="aboutText2">Uzun vadeli hedefim, teknik üretimimi araştırma kültürüyle birleştirerek akademik alanda da katkı sağlayabilmek. Bu portfolyo, öğrendiklerimi ve geliştirdiğim işleri şeffaf biçimde paylaşmak için hazırlandı.</p>
+          <a class="text-link" href="https://github.com/cenqs1" target="_blank" rel="noreferrer">GitHub profilim <span>↗</span></a>
+        </div>
+        <aside class="about-aside reveal">
+          <div class="profile-card">
+            <div class="profile-card-top"><span>PROFILE / 001</span><span class="live-mark">● ACTIVE</span></div>
+            <div class="profile-avatar">CU<span>.</span></div>
+            <h3>Cennet Uçak</h3>
+            <p data-i18n="profileRole">Bilgisayar Programcısı</p>
+            <div class="profile-divider"></div>
+            <div class="profile-fact"><span data-i18n="profileFocus">ODAK</span><b data-i18n="profileFocusValue">Yazılım · AI · Araştırma</b></div>
+            <div class="profile-fact"><span data-i18n="profileMindset">YAKLAŞIM</span><b data-i18n="profileMindsetValue">Üret · Öğren · Geliştir</b></div>
+            <div class="profile-fact"><span data-i18n="profileBase">DİL</span><b>TR / EN</b></div>
           </div>
-        </article>
-
-        <article class="card">
-          <h3 data-i18n="skill2Title">Web Development</h3>
-          <p data-i18n="skill2Text">Web interfaces and application development.</p>
-          <div class="tag-list">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3 data-i18n="skill3Title">Databases & Tools</h3>
-          <p data-i18n="skill3Text">Database concepts and development tools.</p>
-          <div class="tag-list">
-            <span class="tag">MySQL</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
-          </div>
-        </article>
+          <div class="quote-card"><span>“</span><p data-i18n="quote">Her proje, daha iyi sorular sormak için yeni bir fırsattır.</p></div>
+        </aside>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects">
-    <div class="container">
-      <p class="section-label" data-i18n="projectsLabel">03 / SELECTED WORK</p>
-      <h2 data-i18n="projectsTitle">Projects & experiments.</h2>
-
-      <div class="grid">
-        <article class="card project-card">
-          <span class="project-number">PROJECT / 01</span>
-          <h3>HALLEDERİZ</h3>
-          <p data-i18n="project1Text">
-            A service-oriented platform concept connecting customers
-            and service providers.
-          </p>
-          <div class="tag-list">
-            <span class="tag">PHP</span>
-            <span class="tag">MySQL</span>
-          </div>
-          <a class="project-link"
-             href="https://github.com/cenqs1/hallederiz"
-             target="_blank" rel="noopener noreferrer"
-             data-i18n="viewProject">VIEW PROJECT ↗</a>
-        </article>
-
-        <article class="card project-card">
-          <span class="project-number">PROJECT / 02</span>
-          <h3>UÇAK YAZILIM</h3>
-          <p data-i18n="project2Text">
-            A personal software initiative focused on practical digital solutions.
-          </p>
-          <a class="project-link"
-             href="https://github.com/cenqs1/ucakyazilim"
-             target="_blank" rel="noopener noreferrer"
-             data-i18n="viewProject">VIEW PROJECT ↗</a>
-        </article>
-
-        <article class="card project-card">
-          <span class="project-number">PROJECT / 03</span>
-          <h3>DEPREM ACİL</h3>
-          <p data-i18n="project3Text">
-            An emergency assistance application concept for disaster-related support.
-          </p>
-          <a class="project-link"
-             href="https://github.com/cenqs1"
-             target="_blank" rel="noopener noreferrer"
-             data-i18n="viewGithub">VIEW GITHUB ↗</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="training" class="training-section">
-    <div class="container">
-      <p class="section-label" data-i18n="trainingLabel">
-        04 / KNOWLEDGE SHARING
-      </p>
-
-      <h2 data-i18n="trainingTitle">Online Learning & Training.</h2>
-
-      <p class="training-intro" data-i18n="trainingText">
-        Beginner-friendly online coding lessons focused on clear explanations,
-        practical examples and learning by doing.
-      </p>
-
-      <div class="grid">
-        <article class="card">
-          <h3>HTML & CSS</h3>
-          <p data-i18n="training1">
-            Introduction to web development, page structure and styling.
-          </p>
-          <span class="level" data-i18n="beginner">BEGINNER</span>
-        </article>
-
-        <article class="card">
-          <h3>C# Fundamentals</h3>
-          <p data-i18n="training2">
-            Variables, conditions, switch-case and object-oriented concepts.
-          </p>
-          <span class="level" data-i18n="beginner">BEGINNER</span>
-        </article>
-
-        <article class="card">
-          <h3 data-i18n="training3Title">Programming Basics</h3>
-          <p data-i18n="training3">
-            Algorithms and problem-solving step by step.
-          </p>
-          <span class="level" data-i18n="beginner">BEGINNER</span>
-        </article>
-      </div>
-
-      <div class="price-box">
-        <div>
-          <p class="section-label" data-i18n="priceLabel">LESSON RATE</p>
-          <h3><span>500 TL</span> <small data-i18n="perHour">/ hour</small></h3>
-          <p data-i18n="priceDescription">
-            Online individual lessons · By appointment
-          </p>
+    <section class="section skills-section" id="skills">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span>02 /</span> <span data-i18n="skillsEyebrow">ARAÇLARIM</span></p>
+          <h2 data-i18n="skillsTitle">Teknoloji <em>yığınım.</em></h2>
+          <p class="section-description" data-i18n="skillsDesc">Aktif olarak kullandığım veya üzerinde çalıştığım teknolojiler. Yetkinlik seviyeleri yerine öğrenme ve üretim alanlarımı öne çıkarıyorum.</p>
         </div>
-        <a class="button primary"
-           href="mailto:ucakcennet83@gmail.com?subject=Online%20Coding%20Lessons"
-           data-i18n="lessonButton">Lesson Information</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <p class="section-label" data-i18n="contactLabel">05 / CONTACT</p>
-      <h2 data-i18n="contactTitle">Let's connect.</h2>
-
-      <div class="contact-box">
-        <p data-i18n="contactText">
-          For projects, collaboration, online lessons or professional
-          opportunities, feel free to contact me.
-        </p>
-
-        <div class="contact-links">
-          <a class="button primary"
-             href="mailto:ucakcennet83@gmail.com">EMAIL ↗</a>
-
-          <a class="button"
-             href="https://github.com/cenqs1"
-             target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
-
-          <a class="button"
-             href="https://www.linkedin.com/"
-             target="_blank" rel="noopener noreferrer"
-             data-i18n="linkedinButton">LINKEDIN ↗</a>
+        <div class="skills-grid">
+          <article class="skill-card reveal"><span class="skill-index">01</span><div class="skill-icon">⌘</div><h3>Programming</h3><p>C# · Python · JavaScript</p><small data-i18n="skillProgramming">Programlama temelleri, nesne yönelimli yaklaşım</small></article>
+          <article class="skill-card reveal"><span class="skill-index">02</span><div class="skill-icon">⌗</div><h3>Web Development</h3><p>HTML · CSS · PHP</p><small data-i18n="skillWeb">Arayüz geliştirme ve sunucu tarafı mantığı</small></article>
+          <article class="skill-card reveal"><span class="skill-index">03</span><div class="skill-icon">▤</div><h3>Database</h3><p>SQL · MySQL</p><small data-i18n="skillDatabase">Veri modelleme ve ilişkisel veritabanları</small></article>
+          <article class="skill-card reveal"><span class="skill-index">04</span><div class="skill-icon">⌁</div><h3>Tools &amp; Workflow</h3><p>Git · GitHub · VS Code</p><small data-i18n="skillTools">Versiyon kontrolü ve geliştirme süreçleri</small></article>
+          <article class="skill-card reveal"><span class="skill-index">05</span><div class="skill-icon">✳</div><h3>Exploring</h3><p>.NET · AI / ML · Data</p><small data-i18n="skillExploring">Derinleştirmeyi hedeflediğim alanlar</small></article>
         </div>
-
-        <p class="email-address">ucakcennet83@gmail.com</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-</main>
+    <section class="section section-shell" id="projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span>03 /</span> <span data-i18n="projectsEyebrow">SEÇİLMİŞ ÇALIŞMALAR</span></p>
+        <h2 data-i18n="projectsTitle">Fikirden <em>uygulamaya.</em></h2>
+        <p class="section-description" data-i18n="projectsDesc">Projelerimin amacı yalnızca çalışan bir ürün ortaya koymak değil; analiz, tasarım, geliştirme ve iyileştirme süreçlerini deneyimlemek.</p>
+      </div>
+      <div class="project-list">
+        <article class="project-card project-featured reveal">
+          <div class="project-number">01</div>
+          <div class="project-visual visual-hallederiz"><span class="visual-tag">WEB PLATFORM</span><div class="mock-window"><div class="mock-top"><i></i><i></i><i></i><b>HALLEDERİZ</b></div><div class="mock-content"><span class="mock-line wide"></span><span class="mock-line"></span><div class="mock-panels"><i></i><i></i><i></i></div></div></div></div>
+          <div class="project-info"><p class="project-type" data-i18n="projectTypeWeb">WEB UYGULAMASI</p><h3>HALLEDERİZ</h3><p data-i18n="hallederizDesc">Hizmet verenlerle hizmet arayanları bir araya getirmeyi hedefleyen PHP ve MySQL tabanlı platform projesi. Rol bazlı kullanıcı yapısı ve temel yönetim süreçleri üzerine geliştirilmiştir.</p><div class="tag-list"><span>PHP</span><span>MySQL</span><span>CRUD</span><span>Authentication</span></div><a class="project-link" href="https://github.com/cenqs1/hallederiz" target="_blank" rel="noreferrer">GitHub'da incele <span>↗</span></a></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-number">02</div>
+          <div class="project-visual visual-ucak"><span class="visual-tag">BRAND / WEB</span><div class="ucak-mark">U<span>.</span></div><div class="ucak-caption">UÇAK<br>YAZILIM</div></div>
+          <div class="project-info"><p class="project-type" data-i18n="projectTypeWeb">WEB / MARKA</p><h3>UÇAK YAZILIM</h3><p data-i18n="ucakDesc">Yazılım alanındaki çalışmalarımı ve dijital üretimlerimi bir çatı altında sunmak için oluşturduğum marka ve proje alanı.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="project-link" href="https://github.com/cenqs1/ucakyazilim" target="_blank" rel="noreferrer">GitHub'da incele <span>↗</span></a></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-number">03</div>
+          <div class="project-visual visual-emergency"><span class="visual-tag">MOBILE CONCEPT</span><div class="signal-rings"><i></i><i></i><b>!</b></div><div class="emergency-caption">DEPREM<br>ACİL</div></div>
+          <div class="project-info"><p class="project-type" data-i18n="projectTypeMobile">MOBİL UYGULAMA / DEMO</p><h3>DEPREM ACİL</h3><p data-i18n="depremDesc">Acil durum iletişimi ve destek süreçlerine odaklanan Android demo çalışması. Projenin kapsamı ve teknik ayrıntıları geliştirme sürecinde belgelenmektedir.</p><div class="tag-list"><span>Android</span><span>Prototype</span><span>UI / UX</span></div><a class="project-link" href="https://github.com/cenqs1" target="_blank" rel="noreferrer">GitHub profilinde gör <span>↗</span></a></div>
+        </article>
+      </div>
+      <p class="content-note" data-i18n="projectNote">Not: Proje bağlantılarını ve açıklamalarını yayına almadan önce son sürümlerine göre kontrol et.</p>
+    </section>
 
-<footer>
-  <div class="container">
-    © <span id="year"></span> Cennet Uçak ·
-    <span data-i18n="footerText">Built with curiosity and code.</span>
-  </div>
-</footer>
+    <section class="section journey-section" id="journey">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span>04 /</span> <span data-i18n="journeyEyebrow">GELİŞİM SÜRECİ</span></p>
+          <h2 data-i18n="journeyTitle">Bir sonraki <em>seviyeye.</em></h2>
+          <p class="section-description" data-i18n="journeyDesc">Bu zaman çizelgesi tamamlanmış başarı iddiası değil; eğitimimi, üretimimi ve hedeflerimi takip ettiğim yaşayan bir yol haritası.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal"><div class="timeline-pin"></div><div class="timeline-date">FOUNDATION</div><div class="timeline-body"><h3 data-i18n="timeline1Title">Bilgisayar Programcılığı</h3><p data-i18n="timeline1Text">Programlama, web geliştirme, veritabanı ve yazılım mantığı üzerine ön lisans eğitimi.</p><span class="timeline-state" data-i18n="timelineDone">TAMAMLANDI</span></div></article>
+          <article class="timeline-item reveal"><div class="timeline-pin"></div><div class="timeline-date">NOW / 2026</div><div class="timeline-body"><h3 data-i18n="timeline2Title">Yazılım temellerini derinleştirme</h3><p data-i18n="timeline2Text">C# ve nesne yönelimli programlama, algoritmalar, veri yapıları ve Git tabanlı proje pratiği.</p><span class="timeline-state state-current" data-i18n="timelineCurrent">DEVAM EDİYOR</span></div></article>
+          <article class="timeline-item reveal"><div class="timeline-pin"></div><div class="timeline-date">NEXT</div><div class="timeline-body"><h3 data-i18n="timeline3Title">Yapay zekâ ve veri bilimi</h3><p data-i18n="timeline3Text">Python, makine öğrenmesi ve veri odaklı uygulamalar konusunda sistematik uzmanlaşma.</p><span class="timeline-state" data-i18n="timelinePlanned">HEDEF</span></div></article>
+          <article class="timeline-item reveal"><div class="timeline-pin"></div><div class="timeline-date">LONG TERM</div><div class="timeline-body"><h3 data-i18n="timeline4Title">Akademik gelişim</h3><p data-i18n="timeline4Text">Lisans eğitimini sürdürmek, araştırma yöntemlerini öğrenmek ve akademik çalışmalara katkı sunmak.</p><span class="timeline-state" data-i18n="timelinePlanned">HEDEF</span></div></article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section section-shell" id="education">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span>05 /</span> <span data-i18n="educationEyebrow">ÖĞRENME VE PAYLAŞMA</span></p>
+        <h2 data-i18n="educationTitle">Bilgiyi <em>paylaşarak.</em></h2>
+      </div>
+      <div class="education-grid">
+        <article class="education-card reveal"><div class="education-icon">↗</div><p class="project-type" data-i18n="teachingLabel">ONLINE EĞİTİM</p><h3 data-i18n="teachingTitle">Başlangıç seviyesinde kodlama dersleri</h3><p data-i18n="teachingText">HTML, CSS ve temel programlama konularında öğrenme sürecini destekleyen çevrim içi bireysel dersler.</p><div class="education-price"><strong>500 TL</strong><span data-i18n="perHour">/ saat</span></div><a class="button button-outline" href="mailto:ucakcennet83@gmail.com?subject=Online%20Kodlama%20Dersi" data-i18n="teachingCta">Ders hakkında iletişime geç <span>↗</span></a></article>
+        <article class="education-card education-card-muted reveal"><div class="education-icon">✳</div><p class="project-type" data-i18n="certLabel">SERTİFİKALAR &amp; EĞİTİMLER</p><h3 data-i18n="certTitle">Sürekli öğrenme</h3><p data-i18n="certText">Tamamladığım eğitimleri ve doğrulanabilir sertifikaları burada paylaşacağım. Henüz eklenmemiş sertifikalar için yer tutucu kayıt kullanılmamıştır.</p><div class="certificate-placeholder"><span>+</span><div><b data-i18n="certPlaceholderTitle">Yeni sertifika alanı</b><small data-i18n="certPlaceholderText">Sertifika bağlantısı eklendiğinde burada görüntülenecek.</small></div></div></article>
+      </div>
+    </section>
+
+    <section class="section cv-section">
+      <div class="section-shell cv-banner reveal">
+        <div><p class="eyebrow"><span>06 /</span> CURRICULUM VITAE</p><h2 data-i18n="cvTitle">Deneyimimi daha yakından <em>inceleyin.</em></h2><p data-i18n="cvText">Eğitim, teknik yetkinlikler ve projelerimin özeti için CV dosyamı inceleyebilirsiniz.</p></div>
+        <a class="button button-primary" href="assets/cennet-ucak-cv.pdf" target="_blank" rel="noreferrer" data-i18n="cvButton">CV'yi görüntüle <span>↗</span></a>
+      </div>
+      <p class="cv-note" data-i18n="cvNote">CV dosyanı assets klasörüne cennet-ucak-cv.pdf adıyla eklediğinde bu bağlantı çalışacaktır.</p>
+    </section>
+
+    <section class="section contact-section section-shell" id="contact">
+      <div class="contact-top reveal"><p class="eyebrow"><span>07 /</span> <span data-i18n="contactEyebrow">İLETİŞİM</span></p><h2 data-i18n="contactTitle">Bir fikrin mi var?<br><em>Konuşalım.</em></h2><p data-i18n="contactText">Proje, eğitim veya iş birliği fikirleri için benimle iletişime geçebilirsin.</p><a class="contact-email" href="mailto:ucakcennet83@gmail.com">ucakcennet83@gmail.com <span>↗</span></a></div>
+      <div class="contact-bottom reveal"><div class="social-links"><a href="https://github.com/cenqs1" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="mailto:ucakcennet83@gmail.com">EMAIL ↗</a></div><span class="availability"><i></i><span data-i18n="availability">Yeni bağlantılara açık</span></span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell"><a class="brand" href="#home"><span class="brand-mark">CU<span>.</span></span><span class="brand-name">CENNET UÇAK<small>SOFTWARE &amp; RESEARCH</small></span></a><p>© <span id="year"></span> CENNET UÇAK. <span data-i18n="footer">Tüm hakları saklıdır.</span></p><a href="#top" class="back-top" data-i18n="backTop">BAŞA DÖN ↑</a></footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
